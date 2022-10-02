@@ -14,8 +14,9 @@ spec:
     targetRevision: 11.0.37
     helm:
       releaseName: radarr
-        #values: |
-        #  installCRDs: true
+      values: |
+        ingress:
+          enabled: true
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
