@@ -9,9 +9,11 @@ spec:
     server: https://kubernetes.default.svc
   project: sample-project
   source:
-    path: sample-app/
-    repoURL: https://github.com/kurtburak/argocd.git
-    targetRevision: HEAD
+    chart: cert-manager
+    repoURL: https://charts.jetstack.io/
+    targetRevision: 1.9.1
+    helm:
+      releaseName: sealed-secrets
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
