@@ -8,6 +8,8 @@ spec:
   - group: '*'
     kind: '*'
   destinations:
+  - namespace: kube-system
+    server: https://kubernetes.default.svc
   - namespace: sample-app
     server: https://kubernetes.default.svc
   orphanedResources:
