@@ -1,21 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cert-manager
+  name: radarr
   namespace: argocd
 spec:
   destination:
-    namespace: cert-manager
+    namespace: home-stuff
     server: https://kubernetes.default.svc
-  project: infra-project
+  project: home-stuff
   source:
-    chart: cert-manager
-    repoURL: https://charts.jetstack.io/
-    targetRevision: 1.9.1
+    chart: radarr
+    repoURL: https://charts.truecharts.org
+    targetRevision: 11.0.37
     helm:
-      releaseName: cert-manager
-      values: |
-        installCRDs: true
+      releaseName: radarr
+        #values: |
+        #  installCRDs: true
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
