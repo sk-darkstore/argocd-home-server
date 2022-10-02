@@ -10,7 +10,7 @@ spec:
   project: home-stuff
   source:
     chart: radarr
-    repoURL: https://library-charts.truecharts.org/
+    repoURL: https://charts.truecharts.org
     targetRevision: 11.0.37
     helm:
       releaseName: radarr
