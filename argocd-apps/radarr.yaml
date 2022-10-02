@@ -16,8 +16,10 @@ spec:
       releaseName: radarr
       values: |
         ingress:
-          enabled: true
-          host: radarr-192-168-1-171.nip.io
+          main:
+            enabled: true
+            hosts:
+              host: radarr-192-168-1-171.nip.io
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
