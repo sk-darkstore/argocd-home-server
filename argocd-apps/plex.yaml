@@ -11,7 +11,7 @@ spec:
   source:
     chart: plex
     repoURL: https://charts.truecharts.org
-    targetRevision: 11.0.37
+    targetRevision: 10.2.12
     helm:
       releaseName: plex
         #values: |
