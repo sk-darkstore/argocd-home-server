@@ -7,13 +7,13 @@ spec:
   destination:
     namespace: cert-manager
     server: https://kubernetes.default.svc
-  project: sample-project
+  project: infra-project
   source:
     chart: cert-manager
     repoURL: https://charts.jetstack.io/
     targetRevision: 1.9.1
     helm:
-      releaseName: sealed-secrets
+      releaseName: cert-manager
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
